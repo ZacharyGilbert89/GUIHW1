@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+}
+
+:root {
+    --bg-color: #2F2F2F;
+    --second-bg-color: #2d3047;
+    --text-color: #d5dfe5;
+    --main-color: #e3655b;
+}
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color)
+}
+section {
+    min-height: 100vh;
+    padding: 0rem 10% 1rem;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 600;
+    transition: .5s;
+}
+.navbar a:hover,
+.navbar a.current {
+    font-size: 3rem;
+    color: var(--main-color);
+    
+}
+
+.home {
+    position: absolute;
+    margin-left: 250px;
+    margin-right: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-content h3 {
+    font-size: 10rem;
+}
+.home-content h1 {
+    position:absolute;
+    font-size: 5rem;
+    color: transparent;
+    background-image: linear-gradient(to left, #4281A4,#e3655b);
+    -webkit-background-clip: text;
+    animation: TextAnimate 3s linear infinite;
+    background-size: 500%;
+    background-size: 500%;
+
+}
+.waveemoji {
+    position: absolute;
+    padding: 20px;
+    top: 33%;
+    left: 35%;
+    font-size: 10rem;
+}
+.waveemoji h1{
+   animation: wave-animation 3s ease-in-out infinite;
+}
+.profileImg {
+    position: absolute;
+    left: 100%;
+}
+
+.about {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--second-bg-color);
+}
+.about .aboutMetitle {
+    font-size: 50px;
+    padding-top: 100px;
+}
+.aboutText {
+    font-size: 30px;
+    font-weight:700;
+    text-overflow: wrap;
+}
+.bandpictures {
+    position:absolute;
+    align-content: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.GunsNRoses {
+    position:absolute;
+    margin-top: 80px;
+}
+.BlackSabbath {
+    position: absolute;
+    left: 700px;
+    top: 70px;
+}
+.Schedule {
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:200%;
+    width:100%;
+    background-color: var(--main-color);
+    text-align: center;
+}
+.MySchedule {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 50px;
+    font-weight: 700;
+}
+@keyframes wave-animation {
+    50%{transform: rotateZ(15deg)};
+    50%{transform: rotateY(15deg)};
+    50%{transform: rotateX(15deg)};
+}
+@keyframes TextAnimate {
+    0%{
+        background-position: 0 100%;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 100%;
+    }
+}
