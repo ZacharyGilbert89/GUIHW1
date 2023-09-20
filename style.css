@@ -35,7 +35,9 @@ section {
     left: 0;
     width: 100%;
     padding: 1rem 5%;
-    background: var(--second-bg-color);
+    color: transparent;
+    background-image: linear-gradient(to left, #4281A4,#e3655b);
+    animation: TextAnimate 3s linear infinite;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,11 +76,8 @@ section {
 }
 .home-content h1 {
     position:absolute;
-    display: flex;
-    top: 72vh;
-    margin-left: 0vw;
+    top: 60vh;
     font-size: 2vw;
-    align-items: center;
     color: transparent;
     background-image: linear-gradient(to left, #4281A4,#e3655b);
     -webkit-background-clip: text;
@@ -87,25 +86,24 @@ section {
     background-size: 500%;
 
 }
-.waveemoji{
+.emojiImg {
     position: absolute;
-    top: 25vh;
-    left: 20vw;
-    font-size: 7vw;
-    
-}
-.waveemoji .emojiImg{
+    padding-left: 10vw;
+    top: -7vh;
+    left: 15vw;
+    font-size: 10vw;
    animation: wave-animation 3s ease-in-out infinite;
 }
 .profileImg img{
     position: absolute;
+    padding-left: 10vw;
     width: 40vw;
     top: 20vh;
     left: 50vw;
 }
 .about {
     position: absolute;
-    top: 100%;
+    top: 120%;
     width: 100%;
     text-align: center;
     background-color: var(--second-bg-color);
@@ -139,19 +137,38 @@ section {
 }
 .Schedule {
     position:absolute;
+    background-color: var(--main-color);
     margin-left: auto;
     margin-right: auto;
-    top:200vh;
+    top:220vh;
     width:100vw;
-    background-color: var(--main-color);
     text-align: center;
 }
+
 .MySchedule {
     text-align: center;
-    padding-top: 5vh;
+    padding-top: 10vh;
     font-size: 3vw;
     font-weight: 700;
 }
+
+table {
+    table-layout: fixed;
+    width:80vw;
+    height: 10vh;
+    border:5px solid white;
+    font-size: 1vw;
+ }
+ th{
+    border:5px solid white;
+    height: 5vw;
+    padding: 20px;
+ }
+ tr{
+    border: 5px solid white;
+    height: 5vw;
+    padding: 20px;
+ }
 @keyframes wave-animation {
     50%{transform: rotateZ(15deg)};
     50%{transform: rotateY(15deg)};
