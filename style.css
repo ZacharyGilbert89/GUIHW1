@@ -76,8 +76,9 @@ section {
 }
 .home-content h1 {
     position:absolute;
-    top: 60vh;
+    top: 62vh;
     font-size: 2vw;
+    padding-right: 4vw;
     color: transparent;
     background-image: linear-gradient(to left, #4281A4,#e3655b);
     -webkit-background-clip: text;
@@ -100,6 +101,13 @@ section {
     width: 40vw;
     top: 20vh;
     left: 50vw;
+}
+.UmassLowellImg img{
+    position: absolute;
+    background-color: transparent;
+    padding-bottom: 2vh;
+    width: 20vw;
+    top: 80vh;
 }
 .about {
     position: absolute;
