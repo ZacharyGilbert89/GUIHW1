@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;700&display=swap'); /*Font Import*/
 
-*{
+*{/*Master Control*/
     aspect-ratio:auto;
     margin:0;
     padding: 0;
@@ -12,7 +12,7 @@
     font-family: 'Kanit', sans-serif;
 }
 
-:root {
+:root {/*Variables for the colors used throughout the page*/
     --bg-color: #2F2F2F;
     --second-bg-color: #2d3047;
     --text-color: #d5dfe5;
@@ -20,116 +20,114 @@
 }
 html {
     font-size: 60%;
-    overflow-x: hidden;
+    overflow-x: hidden; /*Used to make the bottom scroll bar hidden, we dont need to scroll left or right*/
 }
-body {
+body { /*Main body background*/
     background: var(--bg-color);
     color: var(--text-color)
 }
-section {
+section { /*First section is defined as 100vh, with padding around*/
     min-height: 100vh;
     padding: 0rem 10% 1rem;
 }
-.header {
+/*Navbar------------------------------------------------------------------------------------------------------------*/
+.header {/*We want our navbar to be fixed so any where we visit the page it can be seen*/
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 5%;
     color: transparent;
-    background-image: linear-gradient(to left, #4281A4,#e3655b);
-    animation: TextAnimate 3s linear infinite;
+    background-image: linear-gradient(to left, #4281A4,#e3655b);/*Used to make the navbar have a gradient*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 100;/*We want these items to appear on the top so nothing is accidentally hidden by other stuff*/
 }
-.logo{
+.logo{ /*This is the logo in the top right called "Portfolio"*/
     font-size: 2vw;
     color: var(--text-color);
     font-weight: 600;
-    cursor: default;
+    cursor: default;/*We dont want this to be clickable*/
 }
-.navbar a {
+.navbar a { /*Status before its hovered*/
     font-size: 2vw;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 600;
     transition: .5s;
 }
-.navbar a:hover,
+.navbar a:hover,/*When its hovered over and is selected*/
 .navbar a.current {
     font-size: 3vw;
     color: var(--main-color);
     
 }
-
-.home {
+/*Home Section----------------------------------------------------------------------------------------------------------*/
+.home { /*This is the home page*/
     position: absolute;
     margin-left: -5vw;
     margin-right: 5vw;
     align-items: center;
 }
-.home-content h3 {
+.home p {
+    position: absolute;
+    top: 10vh;
+}
+.home-content h3 { /*Introduction*/
     position:absolute;
     top:20vh;
     font-size: 5vw;
+    padding: 0vw;
 }
-.Major{
-    position:absolute;
-    top: 62vh;
-    padding-right: 10px;
+.Major{ /*Major text*/
+    position:relative;
+    top: 77vh;
+    padding-right: 1vw;
     font-weight: 700;
     font-size: 2vw;
     color: transparent;
-    background-image: linear-gradient(to left, #4281A4,#e3655b);
+    background-image: linear-gradient(to left, #4281A4,#e3655b);/*Gradient*/
     -webkit-background-clip: text;
-    animation: TextAnimate 3s linear infinite;
-    background-size: 500%;
-    background-size: 500%;
+    animation: TextAnimate 3s linear infinite;/*Make a color change animation*/
+    background-size: 500vw;
+    background-size: 500vw;
+    
 
 }
-.emojiImg {
+.emojiImg { /*Emoji animation and style*/
     position: absolute;
     padding-left: 10vw;
-    top: -11vh;
-    left: 10vw;
+    top: 11vh;
+    left: 13vw;
     font-size: 10vw;
    animation: wave-animation 3s ease-in-out infinite;
 }
-.profileImg img{
+.profileImg .borderProfile { /*The colorful border that goes around the profile*/
+    position:absolute;
+    top:15vh;
+    left:57.5vw;
+    width:35vw;
+    height:35vw;
+    background: linear-gradient(#00a6ff,#e3655b);/*gradient*/
+    border-radius: 50vw;
+    animation: profileRing 2s linear infinite;/*Animation for the gradient*/
+}
+.profileImg img{ /*Image position*/
     position: absolute;
     padding-left: 10vw;
     width: 40vw;
     top: 20vh;
     left: 50vw;
 }
-.home-content .borderProfile {
-    position:absolute;
-    top:15vh;
-    left:57.5vw;
-    width:35vw;
-    height:35vw;
-    background: linear-gradient(#00a6ff,#e3655b);
-    border-radius: 50vw;
-    animation: profileRing 2s linear infinite;
-}
-@keyframes profileRing {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-.borderProfile span {
+.borderProfile span { /*Each child has a gradient*/
     position: absolute;
     width:100%;
     height:100%;
     background: linear-gradient(#4281A4,#e3655b);
     border-radius: 50%;
 }
-.borderProfile span:nth-child(1) {
+.borderProfile span:nth-child(1) {/*Each child gets a different blur amount*/
     filter: blur(5px);
 }
 .borderProfile span:nth-child(2) {
@@ -141,49 +139,49 @@ section {
 .borderProfile span:nth-child(4) {
     filter: blur(50px);
 }
-.UmassLowellImg img{
+.UmassLowellImg img{/*Umass Lowell Stamp*/
     position: absolute;
     background-color: transparent;
     padding-bottom: 2vh;
     width: 20vw;
-    right: -80vw;
     top: 85vh;
 }
-.about {
+/*About Section------------------------------------------------------------------------------------------------------------*/
+.about { /*About Section position*/
     position: absolute;
     top: 120%;
     width: 100%;
     text-align: center;
     background-color: var(--second-bg-color);
 }
-.about .aboutMetitle {
+.about .aboutMetitle { /*About me title*/
     font-size: 3vw;
     padding-top: 100px;
 }
-.aboutText {
+.aboutText {/*Main text*/
     font-size: 1.5vw;
     font-weight:700;
-    text-overflow: wrap;
 }
-.bandpictures {
+.bandpictures { /*Band pictures Section*/
     position:absolute;
     align-content: center;
     justify-content: center;
     margin-left: 2vw;
     margin-right: 2vw;
 }
-.GunsNRoses img{
+.GunsNRoses img{ /*Band Picture position*/
     position:absolute;
     width: 20vw;
     margin-top: 5vh;
 }
-.BlackSabbath img{
+.BlackSabbath img{ /*Band Picture position*/
     position: absolute;
     width: 15vw;
     margin-left: 30vw;
     margin-top: 2vh;
 }
-.Schedule {
+/*Schedule Section------------------------------------------------------------------------------------------------------------*/
+.Schedule { /*Schedule Section Position*/
     position:absolute;
     background-color: var(--main-color);
     margin-left: auto;
@@ -192,35 +190,30 @@ section {
     width:100vw;
     text-align: center;
 }
-
-.MySchedule {
+.Schedule h1 { /*My Schedule text*/
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 6vh;
     font-size: 3vw;
     font-weight: 700;
 }
-
-table {
-    table-layout: fixed;
-    width:80vw;
-    height: 10vh;
+table { /*Table Layout*/
+    align-content: center;
+    left: 20vw;
+    right: 20vw;
+    width: 80vw;
     border:5px solid white;
     font-size: 1vw;
  }
- th{
+ th, tr{ /*Table Style, each section has a border*/
     border:5px solid white;
     height: 5vw;
     padding: 20px;
  }
- tr{
-    border: 5px solid white;
-    height: 5vw;
-    padding: 20px;
- }
+ /*Animations----------------------------------------------*/
 @keyframes wave-animation {
-    50%{transform: rotateZ(15deg)};
-    50%{transform: rotateY(15deg)};
-    50%{transform: rotateX(15deg)};
+    50%{transform: rotateZ(15deg)}
+    50%{transform: rotateY(15deg)}
+    50%{transform: rotateX(15deg)}
 }
 @keyframes TextAnimate {
     0%{
@@ -231,5 +224,13 @@ table {
     }
     100%{
         background-position: 0 100%;
+    }
+}
+@keyframes profileRing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

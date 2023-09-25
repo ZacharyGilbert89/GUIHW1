@@ -1,67 +1,80 @@
+<!--
+File: index.html
+GUI Assignment: Creating Your First Web Page
+Zachary Gilbert, UMass Lowell Computer Science,
+Zachary_Gilbert@student.uml.edu
+Copyright (c) 2023 by Zachary Gilbert. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by ZG on September 22, 2023 at 11:30 AM
+-->
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        
-        </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zachary's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zachary's Portfolio</title> <!--This is the title of the page-->
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
-    <header class="header">
+    <header class="header"> <!--Navbar-->
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#schedule">Schedule</a>
+            <a href="#home">Home</a><!--Home Section-->
+            <a href="#about">About</a><!--About Section-->
+            <a href="#schedule">Schedule</a><!--Schedule Section-->
         </nav>
     </header>
-    <section class="home" id="home">
+    <section class="home" id="home"><!--Home Content-->
         <div class="home-content">
-            <h3>Hello!<div class = emojiImg>&#128075</div>
-            <br>My Name is,<nobr><br>Zachary Gilbert</nobr></h3>
-            <div class = "Major"><nobr><u><i>Computer Science Major</i></u></nobr></div>
-            <div class="profileImg">
-                <div class="borderProfile">
+            <h3>Hello!<br>My Name is,<br>Zachary Gilbert</h3><!--Introduction-->
+            <div class = emojiImg>&#128075;</div>
+            <div class = "Major"><u><i>Computer Science Major</i></u></div><!--Major-->
+            <div class="profileImg"><!--Seperate Div for my profile image-->
+                <div class="borderProfile"><!--used to create different blur effects-->
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <img src="/images/MyProfilePicCropped.png">
+                <img src="/images/MyProfilePicCropped.png" alt=""><!--img source-->
             </div>
         </div>
-        <div class="UmassLowellImg">
-            <img src="/images/uml_logo.png">
+        <div class="UmassLowellImg"><!--Umass Lowell Stamp-->
+            <img src="/images/uml_logo.png" alt=""><!--Image Source-->
         </div>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" 
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue" 
+                alt="Valid CSS!">
+                <img style="border:0;width:88px;height:31px" 
+                src="https://www.w3.org/Icons/valid-html401-blue" 
+                alt="Valid HTML!">
+            </a>
+        </p>
+            
     </section>
-    <section class="about" id="about">
-        <div class="aboutMetitle">
-            <h1>About Me</h1>
+    <section class="about" id="about"><!--About Me Section-->
+        <div class="aboutMetitle"><!--Title-->
+            <h1>About Me</h1><!--Text for the title-->
         </div>
         <div class = aboutText><i>I'm currently in my final year at the University of Massachusetts Lowell, eagerly anticipating my graduation in May 2024. My academic journey has been centered around my passion for Computer Science, and I've had the privilege of honing my skills in areas such as C++, C#, and even delving into Assembly Language. As I look forward to my impending graduation, I'm excited to embark on a journey of learning that includes CSS, HTML, and Python, broadening my skill set to encompass web development and more. My insatiable curiosity and eagerness to learn have always been driving forces in my life, and I can't wait to see where my evolving skills will take me in the future.
             Outside of the tech world, one of my greatest passions is playing the guitar, with a particular love for Rock and Metal music. You'll often find me jamming to classics from bands like Black Sabbath, AC/DC, Guns N' Roses, and many others. Music has a special place in my heart, providing both relaxation and inspiration in my life.
             With a blend of technical expertise and a love for music, I'm excited to embrace all that the future holds for me, both in the world of technology and in my personal pursuits.</i>
-        </div>
-        <div class= "bandpictures" >
-            <div class = "GunsNRoses">
-                <img src="/images/Guns_n_roses_logo_PNG1.png" width="600">
+        </div><!--Above is the about me text-->
+        <div class= "bandpictures" ><!--Pictures for the bands that I play-->
+            <div class = "GunsNRoses"><!--GunsNRoses image-->
+                <img src="/images/Guns_n_roses_logo_PNG1.png" alt="" width="600"><!--Image Source-->
             </div>
-            <div class = "BlackSabbath">
-                <img src="/images/Black_sabbath_logo_PNG4.png" width="350">
+            <div class = "BlackSabbath"><!--Black Sabbath image-->
+                <img src="/images/Black_sabbath_logo_PNG4.png" alt="" width="350"><!--Image Source-->
             </div>
-            <img src="">
-            <img src="">
         </div>  
     </section>
-    <section class="Schedule" id="schedule">
-        <div class = "MySchedule" >Here is my current schedule!</div>
-        <table>
-            <tr>
+    <section class="Schedule" id="schedule"><!--Schedule Section-->
+        <h1>Here is my current schedule!</h1>
+        <table><!--Table for the Schedule-->
+            <tr><!--Rows-->
                 <th>Day/Time</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
@@ -71,7 +84,11 @@
             </tr>
             <tr>
                 <th>8am</th>
-                <th></th><th></th><th></th><th></th><th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
             <tr>
                 <th>9am</th>
@@ -108,6 +125,7 @@
                 <th>Intro to Computer Security<br>2:00pm - 3:15pm</th>
                 <th></th><th></th>
             </tr>
+            <tr>
                 <th>6pm</th>
                 <th></th>
                 <th>Database 1<br>6:30pm - 9:20pm</th>
