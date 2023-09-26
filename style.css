@@ -165,21 +165,20 @@ section { /*First section is defined as 100vh, with padding around*/
     font-weight:700;
 }
 .bandpictures { /*Band pictures Section*/
-    position:absolute;
-    align-content: center;
-    justify-content: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    position:relative;
+    display: flex;
+    margin-right: 20vw;
+    justify-content:space-evenly;
 }
 .GunsNRoses img{ /*Band Picture position*/
     position:absolute;
     width: 20vw;
     margin-top: 5vh;
+
 }
 .BlackSabbath img{ /*Band Picture position*/
     position: absolute;
     width: 15vw;
-    margin-left: 30vw;
     margin-top: 2vh;
 }
 /*Schedule Section------------------------------------------------------------------------------------------------------------*/
