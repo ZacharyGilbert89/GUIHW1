@@ -95,14 +95,16 @@ section { /*First section is defined as 100vh, with padding around*/
     
 
 }
+
 .emojiImg { /*Emoji animation and style*/
     position: absolute;
     padding-left: 10vw;
     top: 11vh;
     left: 13vw;
     font-size: 10vw;
-   animation: wave-animation 3s ease-in-out infinite;
+    animation: wave-animation 2s ease-in-out infinite;
 }
+
 .profileImg .borderProfile { /*The colorful border that goes around the profile*/
     position:absolute;
     top:15vh;
@@ -210,11 +212,6 @@ table { /*Table Layout*/
     padding: 20px;
  }
  /*Animations----------------------------------------------*/
-@keyframes wave-animation {
-    50%{transform: rotateZ(15deg)}
-    50%{transform: rotateY(15deg)}
-    50%{transform: rotateX(15deg)}
-}
 @keyframes TextAnimate {
     0%{
         background-position: 0 100%;
@@ -225,6 +222,9 @@ table { /*Table Layout*/
     100%{
         background-position: 0 100%;
     }
+}
+@keyframes wave-animation {
+    50%{transform: rotateZ(7deg)}
 }
 @keyframes profileRing {
     from {
